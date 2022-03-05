@@ -68,7 +68,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 ## Modeling and Tuning:
 We built several Classification models (DecisionTreeClassifier, SVC, RandomForestClassifier, CountVectorizer, AdaBoostClassifier,GradientBoostClassifier,  BaggingClassifier, TFIDFVectorizer) and tuned each models by specifiying hyperparameters via GridSearch.
 
-<img  src="image/accuracy.png" width=300 height=300/>
+<img  src="image/accuracy.png" width=500 height=300/>
 
 
 
