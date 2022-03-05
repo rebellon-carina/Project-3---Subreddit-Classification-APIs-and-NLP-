@@ -34,6 +34,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 |__ presentation
 |   |__ NLP_Classification_NutriKeto.pdf  
 |__ README.md
+|__ Requirement.txt
 ```
 </details>
 
@@ -72,7 +73,7 @@ We built several Classification models (DecisionTreeClassifier, SVC, RandomFores
 
 
 
-BaggingClassfier and TFIDFVectorizer are the top 2 best models in terms of Score or Accuracy.
+GradientBoost Classifier and BaggingClassifier are the top 2 best models in terms of Score or Accuracy.
 
 
 ### Overfitting
@@ -99,17 +100,17 @@ Most of the models have overfitting problems. This is a limitation that has neve
 <img  src="image/Metric2.png" width=300 height=200/>
 
 
-- ***TFIDFVectorizer*** wins Accuracy, Sensitivity and F1 Score
-- ***BaggingClassifier*** wins Specificity and Precision
+- ***GradientBoost Classifier*** wins Accuracy, Sensitivity and F1 Score
+- ***Bagging Classifier*** wins Specificity and Precision
 
 
 
 # Summary:
 - To answer our ***Business Problem***: Yes, we have selected the best model that can classify posts from two different subreddits based on their title.
 
-- We selected ***TFIDF Vecotirizer*** as our best model amongst all models for this classification project, as it is highest not just in Accuracy but also in F1-Score, as we want to balance Sensitivity and Specificity. It is also fast and easy to build with consistent result compared to ensemble methods like Bagging where data is randomly selected. In terms of interpretability, we can also look at the coefficients to validate the words that have highest correlation to wach subreddits.
+- We selected GradientBoost Classifier as our best model amongst all models for this classification project, as it is highest not just in Accuracy but also in F1-Score, as we want to balance Sensitivity and Specificity. 
 
-
+- There is a trade-off between getting the best result and the interpretability of the models, as this is more complex model and we cannot look into the coefficient of which words are highly correlated to each subreddits.
 
 ## Recommendation:
 - Tuning of hyperparameters to overcome overfitting
