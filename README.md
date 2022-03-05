@@ -68,7 +68,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 ## Modeling and Tuning:
 We built several Classification models (DecisionTreeClassifier, SVC, RandomForestClassifier, CountVectorizer, AdaBoostClassifier,GradientBoostClassifier,  BaggingClassifier, TFIDFVectorizer) and tuned each models by specifiying hyperparameters via GridSearch.
 
-<img  src="image/metrics_score.png" width=300 height=200/>
+<img  src="image/metrics_score.png" width=300 height=300/>
 
 
 
@@ -83,16 +83,16 @@ Most of the models have overfitting problems. This is a limitation that has neve
 <img  src="image/Overfitting.png" width=400 height=200/>
 
 
-***DTREE, ADA, SVC*** = Train Score is 10% difference from Test Score
-ALL OTHERS = Train Score is 15% or more % difference from Test
+- ***DTREE, ADA, SVC*** = Train Score is 10% difference from Test Score
+- ALL OTHERS = Train Score is 15% or more % difference from Test
 
 
 ### Metrics
 
-***Sensitivity*** is a measure of the proportion of actual positive cases that got predicted as positive (or true positive). Sensitivity is also termed as Recall.
-***Specificity*** is a measure of the proportion of actual negative cases that got predicted as negative (or true negative).
-***Precision evaluates*** the fraction of correctly classified instances or samples among the ones classified as positives.
-***F-score or F1 Score*** is a measure of a prediction's accuracy. It is calculated from the precision and recall/sensitivity of the test.
+- ***Sensitivity*** is a measure of the proportion of actual positive cases that got predicted as positive (or true positive). Sensitivity is also termed as Recall.
+- ***Specificity*** is a measure of the proportion of actual negative cases that got predicted as negative (or true negative).
+- ***Precision evaluates*** the fraction of correctly classified instances or samples among the ones classified as positives.
+- ***F-score or F1 Score*** is a measure of a prediction's accuracy. It is calculated from the precision and recall/sensitivity of the test.
 
 
 <img  src="image/Metric1.png" width=300 height=200/>
@@ -105,7 +105,7 @@ ALL OTHERS = Train Score is 15% or more % difference from Test
 
 
 # Summary:
-- To answer our ***Business Problem***: Yes, we have created the best model that can classify posts from two different subreddits based on their title.
+- To answer our ***Business Problem***: Yes, we have selected the best model that can classify posts from two different subreddits based on their title.
 
 - We selected ***TFIDF Vecotirizer*** as our best model amongst all models for this classification project, as it is highest not just in Accuracy but also in F1-Score, as we want to balance Sensitivity and Specificity. It is also fast and easy to build with consistent result compared to ensemble methods like Bagging where data is randomly selected. In terms of interpretability, we can also look at the coefficients to validate the words that have highest correlation to wach subreddits.
 
