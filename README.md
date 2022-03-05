@@ -57,7 +57,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 ## Cleanup and Pre-processing 
         
 - Cleanup Author that are from AutoModerator 
-- Remove duplicates in Ttile
+- Remove duplicates in Title
         
 - ***Tokenizing*** (lower case and removed punctuations) 
 - ***Stemming*** (transforms a word into its root form, e.g. eating/eats to eat, losing/loses to lose, why to whi, does to doe)
@@ -68,7 +68,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 ## Modeling and Tuning:
 We built several Classification models (DecisionTreeClassifier, SVC, RandomForestClassifier, CountVectorizer, AdaBoostClassifier,GradientBoostClassifier,  BaggingClassifier, TFIDFVectorizer) and tuned each models by specifiying hyperparameters via GridSearch.
 
-<img  src="image/metrics_score.png" width=300 height=300/>
+<img  src="image/accuracy.png" width=300 height=300/>
 
 
 
@@ -84,7 +84,7 @@ Most of the models have overfitting problems. This is a limitation that has neve
 
 
 - ***DTREE, ADA, SVC*** = Train Score is 10% difference from Test Score
-- ALL OTHERS = Train Score is 15% or more % difference from Test
+- ALL OTHERS = Train Score is 15% (or more) difference from Test
 
 
 ### Metrics
@@ -99,8 +99,8 @@ Most of the models have overfitting problems. This is a limitation that has neve
 <img  src="image/Metric2.png" width=300 height=200/>
 
 
-***TFIDFVectorizer*** wins Accuracy, Sensitivity and F1 Score
-***BaggingClassifier*** wins Specificity and Precision
+- ***TFIDFVectorizer*** wins Accuracy, Sensitivity and F1 Score
+- ***BaggingClassifier*** wins Specificity and Precision
 
 
 
