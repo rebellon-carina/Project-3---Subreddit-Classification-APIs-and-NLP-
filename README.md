@@ -67,7 +67,7 @@ Project 3 - Subreddit Classification (APIs and NLP)
 
 
 ## Modeling and Tuning:
-We built several Classification models (DecisionTreeClassifier, SVC, RandomForestClassifier, CountVectorizer, AdaBoostClassifier,GradientBoostClassifier,  BaggingClassifier, TFIDFVectorizer) and tuned each models by specifiying hyperparameters via GridSearch.
+We built several Classification models (DecisionTreeClassifier, SVC, NaiveBayes(MutiNomial), RandomForestClassifier, CountVectorizer, AdaBoostClassifier,GradientBoostClassifier,  BaggingClassifier, TFIDFVectorizer) and tuned each models by specifiying hyperparameters via GridSearch.
 
 <img  src="image/accuracy.png" width=500 height=300/>
 
@@ -108,9 +108,10 @@ Most of the models have overfitting problems. This is a limitation that has neve
 # Summary:
 - To answer our ***Business Problem***: Yes, we have selected the best model that can classify posts from two different subreddits based on their title.
 
-- We selected GradientBoost Classifier as our best model amongst all models for this classification project, as it is highest not just in Accuracy but also in F1-Score, as we want to balance Sensitivity and Specificity. 
+We selected  Bagging Classifier as our best  model for this classification project, though GradientBoosting Classifier tops Accuracy and F1, it wasn’t that much difference. The major difference is in Sensitivity and Specificity, we want our negative class to be predicted more accurately, as Keto is strict diet and should not be classified under the Nutrition subreddit. Bagging Classifier is highest in this metric with 83.5% rate compared to Bagging Classifier with only 78.5%.
 
-- There is a trade-off between getting the best result and the interpretability of the models, as this is more complex model and we cannot look into the coefficient of which words are highly correlated to each subreddits.
+I think the distribution of probabilities made a lot of difference too in this decision. As we can further enhance the Sensitivity of the BaggingClassifier by adjusting our decision boundaries. There is a trade-off between getting the best result and the interpretability of the model.
+
 
 ## Recommendation:
 - Tuning of hyperparameters to overcome overfitting
