@@ -108,7 +108,7 @@ Most of the models have overfitting problems. This is a limitation that has neve
 # Summary:
 - To answer our ***Business Problem***: Yes, we have selected the best model that can classify posts from two different subreddits based on their title.
 
-We selected  ***Bagging Classifier*** as our best  model for this classification project, though *GradientBoost* Classifier tops Accuracy and F1, it wasn’t that much difference. The major difference is in Sensitivity and Specificity, we want our negative class to be predicted more accurately, as Keto is strict diet and should not be classified under the Nutrition subreddit. Bagging Classifier is highest in this metric with 83.5% rate compared to GradientBoost Classifier with only 78.5%.
+We selected  ***Bagging Classifier*** as our best  model for this classification project, though *GradientBoost* Classifier tops Accuracy and F1, it wasn’t that much difference. The major difference is in Sensitivity and Specificity, we want our negative class to be predicted more accurately, as Keto is strict diet and should not be classified under the Nutrition subreddit. Bagging Classifier is highest in Specificity (True Negative) rate  with 83.5% rate compared to GradientBoost Classifier with only 78.5%.
 
 I think the distribution of probabilities made a lot of difference too in this decision. As we can further enhance the Sensitivity of the BaggingClassifier by adjusting our decision boundaries. There is a trade-off between getting the best result and the interpretability of the model.
 
