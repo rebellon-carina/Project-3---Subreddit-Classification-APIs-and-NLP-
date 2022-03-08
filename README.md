@@ -41,8 +41,10 @@ Project 3 - Subreddit Classification (APIs and NLP)
 # The Data Science Process
 
 ## Problem Statement
-- Can we create a model that can classify posts from two different subreddits based on their title?
 
+- We want to help the moderators to automate the classification and this will benefit the maintenance and sanity of each subreddits by posting to the correct group.
+
+- Can we accurately label if a post is more relevant for *Nutrition* or *Keto*?
 
 ## Data Collection
 
@@ -90,6 +92,9 @@ Most of the models have overfitting problems. This is a limitation that has neve
 
 ### Metrics
 
+Nutrition as the Positive Class (=1)
+Keto as the Negative Class (=0)
+
 - ***Sensitivity*** is a measure of the proportion of actual positive cases that got predicted as positive (or true positive). Sensitivity is also termed as Recall.
 - ***Specificity*** is a measure of the proportion of actual negative cases that got predicted as negative (or true negative).
 - ***Precision evaluates*** the fraction of correctly classified instances or samples among the ones classified as positives.
@@ -109,8 +114,6 @@ Most of the models have overfitting problems. This is a limitation that has neve
 - To answer our ***Business Problem***: Yes, we have selected the best model that can classify posts from two different subreddits based on their title.
 
 We selected  ***Bagging Classifier*** as our best  model for this classification project, though *GradientBoost* Classifier tops Accuracy and F1, it wasn’t that much difference. The major difference is in Sensitivity and Specificity, we want our negative class to be predicted more accurately, as Keto is strict diet and should not be classified under the Nutrition subreddit. Bagging Classifier is highest in Specificity (True Negative) rate  with 83.5% rate compared to GradientBoost Classifier with only 78.5%.
-
-I think the distribution of probabilities made a lot of difference too in this decision. As we can further enhance the Sensitivity of the BaggingClassifier by adjusting our decision boundaries. There is a trade-off between getting the best result and the interpretability of the model.
 
 
 ## Recommendation:
